@@ -53,6 +53,8 @@ public class ekarDemoStepDefinitions {
 
     @Then("I verify {string} message is disabled")
     public void ıVerifyMessageIsDisabled(String errorMessage) {
+        Assert.assertEquals(errorMessage,demoPages.warnMessage.getText());
+        Thread.sleep(2000);
     }
 
     @And("I click Frontside")
@@ -104,6 +106,10 @@ public class ekarDemoStepDefinitions {
                 .moveTo(PointOption.point(endX,endY))
                 .release()
                 .perform();
+        
+        //  ((AndroidDriver<?>) Driver.getAppiumDriver()).
+        //        findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"NEXT\"))");  //UI Selector ScrollInto View Method
+        
     }
 
     @And("I click on Pictures tab")
