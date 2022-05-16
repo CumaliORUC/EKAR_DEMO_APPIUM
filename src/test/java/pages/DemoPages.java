@@ -48,4 +48,7 @@ public class DemoPages {
 
     @AndroidFindBy(xpath = "//com.sec.samsung.gallery.glview.composeView.ThumbObject")
     public MobileElement ImageFromGallery;
+    
+    @AndroidFindBy(xpath = "//android.widget.Toast")
+    public MobileElement warnMessage;
 }
